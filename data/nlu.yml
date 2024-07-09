@@ -1,0 +1,334 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - good day
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes it did
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - good
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - im good thanks and you?
+    - im great
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - i want to buy consumables
+- intent: help_request
+  examples: |
+    - i need help
+    - need assistance
+    - help me
+    - help
+    - i need you
+
+# - synonym: cosumables 
+#   examples: |   
+#   stock
+#   supplies
+
+
+- intent: request_store
+  examples: |
+    - i want to buy consumables
+    - i want to restock
+    - i need new supplies
+    - how do i buy consumables
+    - show me where to get consumables
+    - take me to your shop
+    - i want to purchase consumables
+    - i want to buy
+    - purchase
+    - buy
+    - order
+    - i want to buy a new printer
+
+
+- intent: ask_business_type
+  examples: |
+    - what type of business are you?
+    - what kind of business is this?
+    - what do your business specialise in?
+    - what do your business specialize with?
+    - business type?
+    - what is the focus of the business?
+    - business focus?
+    - what type of business are you
+    - what is the business about
+- intent: ask_product_services
+  examples: |
+    - what services or products do you offer?
+    - what services or products does your business offer?
+    - products offered?
+    - services offered?
+    - offered products and services?
+    - what products and services do you offer?
+    - what does your product range look like?
+    - show me your product range
+- intent: ask_contact_us
+  examples: |
+    - how can i contact or reach you?
+    - what are your contact details?
+    - what are your contact information?
+    - your contact information?
+    - what is your email address?
+    - what is your telephone number?
+    - what is your cellphone number?
+    - how can we contact you?
+    - how can i reach you
+    - i want to contact you
+- intent: ask_location
+  examples: |
+    - give me your address
+    - where are you located?
+    - what is your address?
+    - what is your business address?
+    - where is the business located?
+    - business location?
+    - location?
+    - wher is your business located
+    - where is your business
+- intent: ask_account
+  examples: |
+    - i want to see my profile
+    - take me to the account page
+    - where can i see my account details
+    - where do i go to view my profile
+    - show me my account
+    - let's check out my account
+    - please display my account info
+- intent: ask_account_update
+  examples: |
+    - update my account
+    - how do i update my account
+    - i want my account updated
+    - make changes to my details
+    - change some of my personal data
+    - i want to account updated
+- intent: ask_log_error
+  examples: |
+    - i want to log an error
+    - my printer has an error
+- intent: ask_printer_error
+  examples: |
+    - something is wrong with the printer
+    - help me fix my printer
+- intent: thank
+  examples: |
+    - thank you
+    - it worked
+- intent: ask_view_all_printers
+  examples: |
+    - how do i see the printers
+    - where do i go to find the printers
+    - printers
+    - printers information
+- intent: ask_view_printer
+  examples: |
+    - how do i see the printer
+    - where do i go to find the printer details
+    - printer
+    - printer infroamtion
+    - current printer
+    - current printer code
+- intent: ask_make_payment
+  examples: |
+    - how do i pay for my repair
+    - where do i find where to pay
+    - payment screen
+    - payment
+    - settle account
+- intent: ask_payment_history
+  examples: |
+    - how do i view my past payments
+    - where do i go to find my old payments
+    - payment history screen
+    - purchase order
+    - payment history
+- intent: ask_purchase_order
+  examples: |
+    - how do i view putchase orders
+    - where do i find purchase orders
+    - confirm purchase order
+    - purchase order
+    - approve purchase order
+    - how do i approve purchase order
+- intent: ask_qna
+  examples: |
+    - where can i get more inforamtion about the system
+    - is there more indepth explinations on the system
+    - more info
+    - more information
+    - qna
+    - guide
+    - where can i find a guide
+
+- intent: ask_purchase_order
+  examples: |
+    - how do i view putchase orders
+    - where do i find purchase orders
+    - confirm purchase order
+    - purchase order
+    - approve purchase order
+    - how do i approve purchase order
+
+- intent: navigate_to_dashboard
+  examples: |
+    - i want to get back to the dashboard
+    - where is the home page
+    - take me back to the landing page
+    - home page
+    - dashboard
+    - landing page
+
+- intent: navigate_to_log_error
+  examples: |
+    - i want to get to the log error page
+    - take me to the log error page
+
+- intent: navigate_to_store
+  examples: |
+    - i want to get to the store
+    - take me to the store page
+- intent: navigate_to_printers
+  examples: |
+    - i want to get to the printers page
+    - take me to the printers page
+- intent: navigate_to_make_payment
+  examples: |
+    - i want to get to the make payment page
+    - take me to the make payment page
+- intent: navigate_to_payment_history
+  examples: |
+    - i want to get to the payment history page
+    - take me to the payment history page
+- intent: navigate_to_help
+  examples: |
+    - i want to get to the help page
+    - take me to the help page
+- intent: navigate_to_account
+  examples: |
+    - i want to get to the account page
+    - take me to the account page
+- intent: navigate_to_change_password
+  examples: |
+    - i want to get to the change password page
+    - take me to the change passowrd page
+
+- intent: question
+  examples: |
+    - how do i get there
+    - where can i 
+    - how
+    - where
+    - what are the directions to get there
+
+- intent: dashboard_affirm
+  examples: |
+    - dash
+- intent: log_error_affirm
+  examples: |
+    - log
+- intent: store_affirm
+  examples: |
+    - store
+- intent: printers_affirm
+  examples: |
+    - print
+- intent: make_payment_affirm
+  examples: |
+    - make payment
+- intent: payment_history_affirm
+  examples: |
+    - payment history
+- intent: help_affirm
+  examples: |
+    - help page
+- intent: account_affirm
+  examples: |
+    - account
+- intent: change_password_affirm
+  examples: |
+    - change password
+- intent: contact_us_affirm
+  examples: |
+    - contact us
+- intent: location_info_affirm
+  examples: |
+    - view in maps
+
+

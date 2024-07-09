@@ -1,0 +1,169 @@
+version: '3.1'
+intents:
+- account_affirm
+- affirm
+- ask_account
+- ask_account_update
+- ask_business_type
+- ask_contact_us
+- ask_location
+- ask_log_error
+- ask_make_payment
+- ask_payment_history
+- ask_product_services
+- ask_purchase_order
+- ask_qna
+- ask_view_all_printers
+- ask_view_printer
+- bot_challenge
+- change_password_affirm
+- dashboard_affirm
+- deny
+- goodbye
+- greet
+- help_affirm
+- help_request
+- log_error_affirm
+- make_payment_affirm
+- mood_great
+- mood_unhappy
+- navigate_to_account
+- navigate_to_change_password
+- navigate_to_dashboard
+- navigate_to_help
+- navigate_to_log_error
+- navigate_to_make_payment
+- navigate_to_payment_history
+- navigate_to_printers
+- navigate_to_store
+- nlu_fallback
+- payment_history_affirm
+- printers_affirm
+- question
+- request_store
+- store_affirm
+- thank
+- contact_us_affirm
+- location_info_affirm
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  - text: Hi there. how can i assist
+  utter_cheer_up:
+  - text: im sorry
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: Has the help provided been beneficial?
+  utter_happy:
+  - text: how can i help?
+  utter_goodbye:
+  - text: Good bye
+  - text: Have a nice day
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_help_initiate:
+  - text: What do you need help with?
+  - text: How can i assist you today?
+  utter_store_response:
+  - text: You can buy new stock from the shop page
+  utter_location_info:
+  - text: Our Central Office is 12th Floor, 10 Rua Vasco Da Gama Plain, Foreshore, Cape Town, 8001. type "view in maps" to open in a new tab.
+  utter_business_type_info:
+  - text: Today, fintechaltron.com is the leading card printing company in South Africa and one of the largest, outreach in Africa.
+  utter_product_service_info:
+  - text: 'We are a popular online retailer in South Africa that offers a wide range of products across various categories. Here are some of the product categories you can find on our website:  Electronics: This category includes items such as smartphones, laptops, TVs, cameras, audio equipment, gaming consoles, and accessories.  Home & Kitchen: Here, you can find appliances, furniture, home decor, kitchenware, bedding, and other household items.  Baby & Toddler: This category offers products for infants and young children, including baby gear, toys, clothing, nursery furniture, and feeding essentials.  Beauty, Health & Wellness: We provide a selection of skincare, haircare, makeup, personal care products, vitamins, supplements, fitness equipment, and health-related items.  Fashion: You can explore a variety of clothing, shoes, bags, accessories, and fashion brands for men, women, and children.  Books, Movies & TV Series: We offer a wide range of books, eBooks, movies, TV series, music, and related media in various formats.  Sports, Outdoor & Travel: This category covers sports equipment, outdoor gear, camping supplies, luggage, travel accessories, and fitness products.  Toys & Games: Here, you can find toys, games, puzzles, board games, action figures, and educational items for children of all ages.  Automotive: We provide automotive accessories, car care products, tools, and equipment.  DIY, Tools & Home Improvement: This category includes tools, hardware, power equipment, DIY supplies, and home improvement products.  Please note that this list is not exhaustive, and We offer many more product categories and subcategories. You can visit our website or app to explore our complete range of products.'
+  utter_contact_us_info:
+  - text: Please visit our Contact us page. Type "contact us" to open it in a new page
+  utter_account_information:
+  - text: You can find your account details on the account page
+  utter_account_update_info:
+  - text: Your account details can be updated on the account page
+  utter_negative_feedback_response:
+  - text: My apologies. please provide more details or contact support at 011 420 6969
+  utter_return_thanks:
+  - text: You are welcome
+  - text: It is a pleasure
+  - text: Glad i could assist
+  utter_printers_information:
+  - text: You can find all the printers related to your copany on the printers page
+  utter_printer_information:
+  - text: Click on the printer icon on the dashboard
+  utter_payment_details:
+  - text: You can make payments for the repairs on the make payment page
+  utter_payment_history_details:
+  - text: You can view previous payments on the payment history page
+  utter_error_log_response:
+  - text: You can log this error for the printer on the log error page
+  utter_purchase_order:
+  - text: You can view the purchase order page
+  utter_qna:
+  - text: You can view the help on the help page
+  utter_account_information_directions:
+  - text: From any page look to the top right of the page and click on the user icon, the Account page will load. You must then click on the "Your details Button" and your information will be shown to you
+  utter_log_error_directions:
+  - text: Make sure your on the dashboard by clicking on the ACS logo in the top right corner of any page, once done you will see two buttons in the middle of the screen click the one that says Log error
+  utter_printers_directions:
+  - text: From any page look for the printers navigation bar option at the top of the screen and click it.
+  utter_printer_directions:
+  - text: Make sure your on the dashboard by clicking on the ACS logo in the top right corner of any page, then click on the printer icon
+  utter_payment_directions:
+  - text: From any page look for the financials navigation bar option at the top of the screen and click it, a screen called client finacials will load in the center of the screen you will see two buttons click the "Financial Account" button, a screen called financial account will load in the center of this screen there will be two buttons if you would like to make a payment click the "Make Payments" button if you would like to check your payment history click on the "Payment History" button
+  utter_purchase_order_directions:
+  - text: From any page look for the financials navigation bar option at the top of the screen and click it, a screen called client finacials will load in the center of the screen you will see two buttons click the "Financial Account" button, a screen called financial account will load in the center of this screen there will be two buttons if you wich to approve a purchase order click the "Purchase Order" button
+  utter_qna_directions:
+  - text: From any page look for the help navigation bar option at the top of the screen and click it.
+  utter_account_update_directions:
+  - text: From any page look to the top right of the page and click on the user icon, the Account page will load. You must then click on the "Account Actions" and and then click the change password button.
+  utter_store_directions:
+  - text: Make sure your on the dashboard by clicking on the ACS logo in the top right corner of any page, once done you will see two buttons in the middle of the screen click the one that says "ACS store"
+  utter_navigation_dashboard_confirm:
+  - text: The dashboard page will open on a new tab if you would like to continue type "dash"'
+  utter_navigation_log_error_confirm:
+  - text: The log error page will open on a new tab if you would like to continue type "log"'
+  utter_navigation_store_confirm:
+  - text: The store page will open on a new tab if you would like to continue type "store"'
+  utter_navigation_printers_confirm:
+  - text: The printers page will open on a new tab if you would like to continue type "print"'
+  utter_navigation_make_payment_confirm:
+  - text: The make payment page will open on a new tab if you would like to continue type "make payment"'
+  utter_navigation_payment_history_confirm:
+  - text: The payment history page will open on a new tab if you would like to continue type "payment history"'
+  utter_navigation_help_confirm:
+  - text: The help page will open on a new tab if you would like to continue type "help page"'
+  utter_navigation_account_confirm:
+  - text: The account page will open on a new tab if you would like to continue type "account"'
+  utter_navigation_change_password_confirm:
+  - text: The change password page will open on a new tab if you would like to continue type "change password"'
+entities:
+- navigated_url
+slots:
+  navigated_url:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: navigated_url
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- action_navigate_to_url
+- utter_navigation_confirm
+- action_default_fallback
+- utter_help_initiate
+- utter_account_update_info
+- utter_return_thanks
+- utter_happy
+- utter_store_response
+- utter_account_information
+- utter_location_info
+- utter_contact_us_info
+- utter_greet
+- utter_goodbye
+- utter_did_that_help
+- utter_error_log_response
+- utter_printers_information
+- utter_printer_information
+- utter_payment_details
+- utter_purchase_order
+- utter_qna
+- action_confirm_navigation

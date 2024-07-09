@@ -1,0 +1,365 @@
+# Where you create a story based on how a conversation may go
+
+version: "3.1"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+- story: help request 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_request
+  - action: utter_help_initiate
+  - intent: request_store
+  - action: utter_store_response
+  # - checkpoint: utter_did_that_help
+  # - intent: affirm
+  # - action: utter_happy
+
+# - story: help request with error code
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: help_request
+#   - action: utter_help_initiate
+#   - intent: ask_log_error
+#   #- slot_was_set:
+#   #  - log_error: error
+#   - action: utter_error_log_response_with_error_code
+#   - checkpoint: utter_did_that_help
+#   - intent: deny
+#   - action: utter_negative_feedback_response
+
+# - story: help request without error code
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: help_request
+#   - action: utter_help_initiate
+#   - intent: ask_log_error
+#   - action: utter_error_log_response_without_error_code
+
+- story: store purchase path 1
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  # - intent: help_request
+  # - action: utter_help_initiate
+  - intent: request_store
+  - action: utter_store_response
+  # - checkpoint: utter_did_that_help
+  # - intent: affirm
+  # - action: utter_happy
+  # - intent: goodbye
+  # - action: utter_goodbye
+- story: store purchase path 2
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  # - intent: help_request
+  # - action: utter_help_initiate
+  - intent: request_store
+  - action: utter_store_response
+  - intent: question
+  - action: utter_store_directions
+
+- story: account information path 1
+  steps: 
+  - intent: ask_account
+  - action: utter_account_information
+
+- story: account information path 2
+  steps: 
+  - intent: ask_account
+  - action: utter_account_information
+  - intent: question
+  - action: utter_account_information_directions
+  # - checkpoint: utter_did_that_help
+  # - intent: affirm
+  # - action: utter_happy
+  # - intent: goodbye
+  # - action: utter_goodbye
+
+- story: account update path 1
+  steps: 
+  - intent: ask_account_update
+  - action: utter_account_update_info
+  # - checkpoint: utter_did_that_help
+  # - intent: affirm
+  # - action: utter_happy
+  # - intent: goodbye
+  # - action: utter_goodbye
+
+- story: account update path 2
+  steps: 
+  - intent: ask_account_update
+  - action: utter_account_update_info
+  - intent: question
+  - action: utter_account_update_directions
+
+- story: log error path 1
+  steps: 
+  - intent: ask_log_error
+  - action: utter_error_log_response
+  # - checkpoint: utter_did_that_help
+  # - intent: affirm
+  # - action: utter_happy
+  # - intent: goodbye
+  # - action: utter_goodbye
+
+- story: log error path 2
+  steps: 
+  - intent: ask_log_error
+  - action: utter_error_log_response
+  - intent: question
+  - action: utter_log_error_directions
+
+- story: business information path 1
+  steps:
+  - intent: ask_product_services
+  - action: utter_product_service_info
+  - intent: ask_contact_us
+  - action: utter_contact_us_info
+
+- story: business information path 2
+  steps:
+  - intent: ask_product_services
+  - action: utter_product_service_info
+  - intent: ask_contact_us
+  - action: utter_contact_us_info
+  - intent: contact_us_affirm
+  - action: action_navigate_to_url
+
+- story: business information path 3
+  steps:
+  - intent: ask_location
+  - action: utter_location_info
+  - intent: ask_business_type
+  - action: utter_business_type_info
+
+- story: business information path 4
+  steps:
+  - intent: ask_location
+  - action: utter_location_info
+  - intent: location_info_affirm
+  - action: action_navigate_to_url
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_business_type
+  - action: utter_business_type_info
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - intent: mood_great
+  - action: utter_happy
+  - intent: ask_location
+  - action: utter_location_info
+  - intent: ask_contact_us
+  - action: utter_contact_us_info
+
+- story: interactive_story_3
+  steps:
+  - intent: help_request
+  - action: utter_help_initiate
+  - intent: request_store
+  - action: utter_store_response
+  - intent: nlu_fallback
+  - action: utter_happy
+  - intent: ask_account
+  - action: utter_account_information
+  - intent: ask_account_update
+  - action: utter_account_update_info
+
+- story: Printers information path 1
+  steps: 
+  - intent: ask_view_all_printers
+  - action: utter_printers_information
+  # - checkpoint: utter_did_that_help
+  # - intent: affirm
+  # - action: utter_happy
+  # - intent: goodbye
+  # - action: utter_goodbye
+
+- story: Printers information path 2
+  steps: 
+  - intent: ask_view_all_printers
+  - action: utter_printers_information
+  - intent: question
+  - action: utter_printers_directions
+
+- story: Printer information path 1
+  steps: 
+  - intent: ask_view_printer
+  - action: utter_printer_information
+  # - checkpoint: utter_did_that_help
+  # - intent: affirm
+  # - action: utter_happy
+  # - intent: goodbye
+  # - action: utter_goodbye
+
+- story: Printer information path 2
+  steps: 
+  - intent: ask_view_printer
+  - action: utter_printer_information
+  - intent: question
+  - action: utter_printer_directions
+
+- story: Payment information path 1
+  steps: 
+  - intent: ask_make_payment
+  - action: utter_payment_details
+  # - checkpoint: utter_did_that_help
+  # - intent: affirm
+  # - action: utter_happy
+  # - intent: goodbye
+  # - action: utter_goodbye
+
+- story: Payment information path 2
+  steps: 
+  - intent: ask_make_payment
+  - action: utter_payment_details
+  - intent: question
+  - action: utter_payment_directions
+
+- story: Payment history path 1
+  steps: 
+  - intent: ask_payment_history
+  - action: utter_payment_history_details
+
+- story: Payment history path 2
+  steps: 
+  - intent: ask_payment_history
+  - action: utter_payment_history_details
+  - intent: question
+  - action: utter_payment_directions
+
+- story: Purchase order information path 1
+  steps: 
+  - intent: ask_purchase_order
+  - action: utter_purchase_order
+  # - checkpoint: utter_did_that_help
+  # - intent: affirm
+  # - action: utter_happy
+  # - intent: goodbye
+  # - action: utter_goodbye
+
+- story: Purchase order information path 2
+  steps: 
+  - intent: ask_purchase_order
+  - action: utter_purchase_order
+  - intent: question
+  - action: utter_purchase_order_directions
+
+- story: QNA information path 1
+  steps: 
+  - intent: ask_qna
+  - action: utter_qna
+  # - checkpoint: utter_did_that_help
+  # - intent: affirm
+  # - action: utter_happy
+  # - intent: goodbye
+  # - action: utter_goodbye
+
+- story: QNA information path 2
+  steps: 
+  - intent: ask_qna
+  - action: utter_qna
+  - intent: question
+  - action: utter_qna_directions
+
+- story: Navigation dashboard
+  steps: 
+  - intent: navigate_to_dashboard
+  - action: utter_navigation_dashboard_confirm
+  - intent: dashboard_affirm
+  - action: action_navigate_to_url
+
+- story: Navigation log error
+  steps: 
+  - intent: navigate_to_log_error
+  - action: utter_navigation_log_error_confirm
+  - intent: log_error_affirm
+  - action: action_navigate_to_url
+
+- story: Navigation store
+  steps: 
+  - intent: navigate_to_store
+  - action: utter_navigation_store_confirm
+  - intent: store_affirm
+  - action: action_navigate_to_url
+
+- story: Navigation printers
+  steps: 
+  - intent: navigate_to_printers
+  - action: utter_navigation_printers_confirm
+  - intent: printers_affirm
+  - action: action_navigate_to_url
+
+- story: Navigation make payment
+  steps: 
+  - intent: navigate_to_make_payment
+  - action: utter_navigation_make_payment_confirm
+  - intent: make_payment_affirm
+  - action: action_navigate_to_url
+
+- story: Navigation payment history
+  steps: 
+  - intent: navigate_to_payment_history
+  - action: utter_navigation_payment_history_confirm
+  - intent: payment_history_affirm
+  - action: action_navigate_to_url
+
+- story: Navigation help
+  steps: 
+  - intent: navigate_to_help
+  - action: utter_navigation_help_confirm
+  - intent: help_affirm
+  - action: action_navigate_to_url
+
+- story: Navigation account
+  steps: 
+  - intent: navigate_to_account
+  - action: utter_navigation_account_confirm
+  - intent: account_affirm
+  - action: action_navigate_to_url
+
+- story: Navigation change password
+  steps: 
+  - intent: navigate_to_change_password
+  - action: utter_navigation_change_password_confirm
+  - intent: change_password_affirm
+  - action: action_navigate_to_url
+  
